@@ -1,1 +1,27 @@
-<p>professionals works!</p>
+<html>
+    <!-- Cards Block -->
+    <div class="main-container d-flex flex-row justify-content-around flex-wrap gap-5 p-5" *ngIf="pros.length>0; else empty">
+        <ng-container *ngFor="let pro of pros;">
+            <div [pro]="pro" class="card" style="width: 18rem;">
+                <img src={{pro.photo}} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{pro.name}} {{pro.lastname}}</h5>
+                    <p class="card-text"><span class="fw-bolder">Edad:</span> {{pro.age}} <br>
+                                        <span class="fw-bolder">Peso:</span> {{pro.weight}} <br>
+                                        <span class="fw-bolder">Altura:</span> {{pro.height}} <br>
+                                        <span class="fw-bolder">¿Está retirado/a?:</span> {{pro.isRetired}} <br>
+                                        <span class="fw-bolder">Nacionalidad:</span> {{pro.nationality}} <br>
+                                        <span class="fw-bolder">Oscars:</span> {{pro.oscarsNumber}} <br>
+                                        <span class="fw-bolder">Profesión:</span> {{pro.profession}} <br>
+                                        <span class="fw-bolder">ID:</span> {{pro._id}}</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+
+    <ng-template #empty>
+        <div class="main-container d-flex justify-content-center p-5" style="height: 100vh;">
+            <h1 class="fs-4 text-danger">No hay Profesionales</h1>
+        </div>
+    </ng-template>
+</html>

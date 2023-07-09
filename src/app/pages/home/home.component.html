@@ -1,1 +1,63 @@
-<p>home works!</p>
+<html class="d-flex flex-column align-items-center gap-4 pb-4">
+    <h1 class="d-flex flex-row mt-3 text-warning">Conectando talento, creando magia cinematográfica</h1>
+
+    <form class="bg-white p-3 rounded">
+        <div class="mb-3">
+            <p class="text-center fw-bolder fs-5">Visualiza, Crea, Actualiza o Elimina <br> a tus Profesionales de Cine </p>
+        </div>
+        <div class="mb-3">
+            <label for="proName" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="proName" aria-describedby="proName" #proName>
+        </div>
+        <div class="mb-3">
+            <label for="proLastame" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="proLastname" aria-describedby="proLastname" #proLastname>
+        </div>
+        <div class="mb-3">
+            <label for="proAge" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="proAge" aria-describedby="proAge" #proAge>
+        </div>
+        <div class="mb-3">
+            <label for="proWeight" class="form-label">Peso</label>
+            <input type="number" class="form-control" id="proWeight" aria-describedby="proWeight" #proWeight>
+        </div>
+        <div class="mb-3">
+            <label for="proHeight" class="form-label">Altura</label>
+            <input type="number" class="form-control" id="proHeight" aria-describedby="proHeight" #proHeight>
+        </div>
+        <div class="mb-3">
+            <label for="proRetired" class="form-label">¿Está retirado?</label>
+            <select class="form-select" id="proRetired" #proRetired>
+                <option selected value="false">Elige una opción</option>
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="proNationality" class="form-label">Nacionalidad</label>
+            <input type="text" class="form-control" id="proNationality" aria-describedby="proNationality" #proNationality>
+        </div>
+        <div class="mb-3">
+            <label for="proOscars" class="form-label">Número de  premios Oscars ganados</label>
+            <input type="number" class="form-control" id="proOscars" aria-describedby="proOscars" #proOscars>
+        </div>
+        <div class="mb-3">
+            <label for="proProfession" class="form-label">Profesión</label>
+            <input type="text" class="form-control" id="proProfession" aria-describedby="proProfession" #proProfession>
+        </div>
+        <div class="mb-3">
+            <label for="proPhoto" class="form-label">Url de su foto</label>
+            <input type="url" class="form-control" id="proPhoto" aria-describedby="proPhoto" #proPhoto>
+        </div>
+        <div class="mb-3">
+            <label for="proId" class="form-label">ID del profesional (solo para Mostrar, Actualizar y Eliminar)</label>
+            <input type="text" class="form-control" id="proId" aria-describedby="proId" #proId>
+        </div>
+        <div class="d-flex flex-row justify-content-around">
+            <button type="submit" class="btn btn-primary" (click)="mostrarPros(proName.value,proLastname.value)">Mostrar</button>
+            <button type="submit" class="btn btn-success" (click)="nuevoPro(proName.value,proLastname.value,proAge.value,proWeight.value,proHeight.value,proRetired.value,proNationality.value,proOscars.value,proProfession.value,proPhoto.value)">Crear</button>
+            <button type="submit" class="btn btn-warning" (click)="modificarPro(proName.value,proLastname.value,proAge.value,proWeight.value,proHeight.value,proRetired.value,proNationality.value,proOscars.value,proProfession.value,proPhoto.value,proId.value)">Modificar</button>
+            <button type="submit" class="btn btn-danger" (click)="eliminarPro(proId.value)">Eliminar</button>
+        </div>
+    </form>
+</html>
