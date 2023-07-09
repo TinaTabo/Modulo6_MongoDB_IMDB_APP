@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProfessionalsService {
 
-  private url = "http://localhost:3000/profesionales"
+  private url = "https://modulo6-mongo-db-imdb-api-rest.vercel.app/profesionales"
   public pros: Professional[];
 
   constructor(private http: HttpClient){
