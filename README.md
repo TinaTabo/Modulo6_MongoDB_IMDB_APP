@@ -1,5 +1,7 @@
 # Modulo6MongoDBIMDBAPP
 
+URL de la web desplegada: https://modulo6-mongo-db-imdb-app.vercel.app/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
 
 ## Development server
